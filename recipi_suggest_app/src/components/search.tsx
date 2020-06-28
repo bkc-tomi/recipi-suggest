@@ -10,7 +10,7 @@ const useStyle = makeStyles(() => createStyles({
     position: "absolute",
     width: "300px",
     left: "calc(50% - 150px)",
-    top: "20%",
+    top: "15%",
     opacity: "0.8",
     boxShadow: "5px 5px 20px #555",
   },
