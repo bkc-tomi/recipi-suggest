@@ -1,10 +1,13 @@
 import React, { FC, useState, useEffect } from 'react';
 import { TileData } from "./type/type";
+import { createStyles, makeStyles } from "@material-ui/core/styles";
+
 import ResultList from "./components/resultList";
 import SearchBox from "./components/search";
-import { createStyles, makeStyles } from "@material-ui/core/styles";
 import bgImage from "./assets/image/background.jpg";
 import Footer from "./components/footer";
+import HowToUse from "./components/howToUse";
+import HowToUsePage from "./components/howToUsePage";
 
 const useStyle = makeStyles(() => createStyles({
   bg: {
@@ -16,8 +19,8 @@ const useStyle = makeStyles(() => createStyles({
     margin: "0 auto",
     padding: "0",
     position: "relative",
-    top: "25%",
-    height: "60%",
+    top: "35%",
+    height: "55%",
     width: "90%",
   },
   title: {
@@ -32,12 +35,22 @@ const useStyle = makeStyles(() => createStyles({
   footer: {
     position: "absolute",
     bottom: "0",
-  }
+  },
+  howto: {
+    zIndex: 10,
+    position: "absolute",
+    top: "0",
+    left: "0",
+    width: "100%",
+    height: "100%",
+  },
+
 }));
 
 const TopPage: FC = () => {
   const [datas, setDatas] = useState<TileData[]>([]);
   const [keyword, setKeyword] = useState<string>("");
+  const [visible, setVisible] = useState<boolean>(false);
 
   const classes = useStyle();
   const getData = () => {
@@ -62,6 +75,22 @@ const TopPage: FC = () => {
     getData();
   }, []);
 
+  const showHowToUsePage = () => {
+    if (visible) {
+      return (
+        <div 
+          className={ classes.howto } 
+        >
+          <HowToUsePage />
+        </div>
+      );
+    } else {
+      return (
+        <div></div>
+      );
+    }
+  }
+
   return (
     <div className={ classes.bg }>
       <h1 className={ classes.title }>今日の献立何にしよ？</h1>
@@ -76,7 +105,15 @@ const TopPage: FC = () => {
         />
       </div>
       <div className={ classes.footer }>
-        <Footer />
+        <Footer/>
+      </div>
+      { showHowToUsePage() }
+      <div>
+        <HowToUse
+          visible={ visible }
+          setVisible={ setVisible }
+          setKeyword={ setKeyword }
+        />
       </div>
     </div>
   );

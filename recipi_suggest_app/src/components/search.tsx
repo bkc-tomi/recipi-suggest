@@ -38,7 +38,7 @@ const SearchBox: FC<{ setKeyword: any, keyword: string }>= (props) => {
       >
         <TextField
           id="standard-basic"
-          label="Search"
+          label="検索"
           className={ classes.textbox }
           onChange={ changeKeyword }
           value={ props.keyword }
