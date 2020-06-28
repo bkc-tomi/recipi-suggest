@@ -33,12 +33,13 @@ const ResultList: FC<{ datas: TileData[], keyword: string }> = (props) => {
   }
 
   return (
-    <GridList cellHeight={100} cols={3} className={ classes.list }>
+    <GridList cellHeight={150} cols={3} className={ classes.list }>
       {filteredDatas.map( (data) => (
         <GridListTile key={ data.categoryId } cols={ 1 } >
             <Button
               href={ data.categoryUrl }
               className={ classes.btn }
+              target="_blank"
             >
               { data.categoryName }
             </Button>

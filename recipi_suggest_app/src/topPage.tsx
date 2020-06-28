@@ -19,7 +19,7 @@ const useStyle = makeStyles(() => createStyles({
     margin: "0 auto",
     padding: "0",
     position: "relative",
-    top: "35%",
+    top: "30%",
     height: "55%",
     width: "90%",
   },
@@ -29,7 +29,7 @@ const useStyle = makeStyles(() => createStyles({
     color: "#fff",
     textShadow: "2px 2px 5px #000",
     position: "relative",
-    top: "10%",
+    top: "5%",
     fontSize: "26px",
   },
   footer: {
