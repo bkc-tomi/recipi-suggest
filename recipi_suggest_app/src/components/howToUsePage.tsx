@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { createStyles, makeStyles } from "@material-ui/core/styles";
-import fingerImage from "../assets/image/icon_finger.png";
+import finger from "../assets/image/icon_finger.png";
 import Paper from "@material-ui/core/Paper";
 
 const useStyle = makeStyles(() => createStyles({
@@ -59,24 +59,24 @@ const HowToUsePage: FC = () => {
   return (
     <div className={ classes.cover }>
       <img
-        src={ fingerImage }
-        alt="finger-image"
+        src={ finger }
+        alt="finger"
         className={ classes.image1 }
       />
       <Paper className={ classes.paper1 }>
         ここに食材などのキーワードを入れましょう！
       </Paper>
       <img
-        src={ fingerImage }
-        alt="finger-image"
+        src={ finger }
+        alt="finger"
         className={ classes.image2 }
       />
       <Paper className={ classes.paper2 }>
         ここに関連した食材などの一覧が出てきます。クリック(タップ)すると楽天のレシピページに飛びます。お好みの料理を見つけましょう！
       </Paper>
       <img
-        src={ fingerImage }
-        alt="finger-image"
+        src={ finger }
+        alt="finger"
         className={ classes.image3 }
       />
       <Paper className={ classes.paper3 }>

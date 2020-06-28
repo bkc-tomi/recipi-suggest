@@ -64,9 +64,9 @@ const TopPage: FC = () => {
       const result = this.response;
       const resultJson = JSON.parse(result);
       console.log(resultJson);
-      resultJson.result.small.map((data: TileData) => {
-        datas.push(data);
-      });
+      resultJson.result.small.map((data: TileData) => 
+        datas.push(data)
+      );
       setDatas(datas as TileData[]);
     }
     request.send();

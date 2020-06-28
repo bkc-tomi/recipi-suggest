@@ -1,5 +1,4 @@
 import React, { FC } from 'react';
-import HowToUseBtn from "./howToUse";
 import { createStyles, makeStyles } from "@material-ui/core/styles";
 
 const useStyle = makeStyles(() => createStyles({
