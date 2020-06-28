@@ -7,6 +7,7 @@ const useStyle = makeStyles(() => createStyles({
     margin: "0",
     width: "100%",
     textAlign: "center",
+    fontSize: "12px",
   },
   area: {
     background: "#aaa",
@@ -19,7 +20,7 @@ const Footer: FC = () => {
   const classes = useStyle();
   return (
     <div className={ classes.area }>
-      <h3 className={ classes.text }>Footerだよ。</h3>
+      <h3 className={ classes.text }>このサイトは楽天のAPIを使用しています。</h3>
     </div>
   );
 }
